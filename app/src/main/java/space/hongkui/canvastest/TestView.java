@@ -46,20 +46,32 @@ public class TestView extends View {
         paint.setStyle(Paint.Style.FILL);
         paint.setStrokeWidth(10);
         paint.setColor(Color.BLUE);
+        paint.setAlpha(160);
         float[] d = {100f, 100f, 100f, 200f, 200f, 200f, 300f, 300f};
 
         Rect rect = new Rect(100, 100, 300, 500);
 
         RectF rectF = new RectF(500f, 100, 800, 500);
+        canvas.drawRect(rect, paint);
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setColor(Color.RED);
+        canvas.drawRoundRect(rectF,20,50,paint);
+        paint.setStyle(Paint.Style.FILL);
+        paint.setColor(Color.YELLOW);
+        canvas.drawCircle(200, 200, 100, paint);
 
+        canvas.drawArc(rectF, 0, 360, true, paint);
+        paint.setColor(Color.GREEN);
+        canvas.drawArc(rectF, 0, 120, true, paint);
+        paint.setColor(Color.GRAY);
+        canvas.drawArc(rectF, 0, 120, false, paint);
 
+        paint.setColor(Color.BLACK);
         Path p = new Path();
         p.moveTo(100, 100);
         p.lineTo(200, 200);
         p.lineTo(300, 500);
-//        canvas.drawPath(p, paint);
+       canvas.drawPath(p, paint);
 
-        canvas.clipOutRect(rect);
-        canvas.drawColor(0xff123456);
     }
 }
