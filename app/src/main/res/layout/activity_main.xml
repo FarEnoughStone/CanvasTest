@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <space.hongkui.canvastest.CanvasTest
+    <space.hongkui.canvastest.CanvasSaveTest
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
