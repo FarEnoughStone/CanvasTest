@@ -12,9 +12,10 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TestView testView = new TestView(this);
+        CanvasDrawView canvasDrawView = new CanvasDrawView(this);
         CanvasSaveTest canvasSaveTest = new CanvasSaveTest(this);
-        setContentView(testView);
+        CanvasClipAndChange canvasClipAndChange = new CanvasClipAndChange(this);
+        setContentView(canvasSaveTest);
         // setContentView(R.layout.activity_main);
     }
 }

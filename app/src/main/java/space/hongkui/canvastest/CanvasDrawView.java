@@ -10,20 +10,20 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 
-public class TestView extends View {
+public class CanvasDrawView extends View {
     Paint paint;
 
-    public TestView(Context context) {
+    public CanvasDrawView(Context context) {
         super(context);
         init();
     }
 
-    public TestView(Context context, AttributeSet attrs) {
+    public CanvasDrawView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public TestView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CanvasDrawView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
